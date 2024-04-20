@@ -47,20 +47,7 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-	</dependencies>
-
-	<distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://20.244.108.232:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://20.244.108.232:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
+			
 	<build>
 		<plugins>
 			<plugin>
@@ -69,5 +56,32 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
+ <repositories>
+	 <repository>
+  <id>repo14</id>
+  <url>https://pkgs.dev.azure.com/newprojectazure14/project1/_packaging/repo14/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+   </repositories>
+
+<distributionManagement>
+	<repository>
+  <id>repo14</id>
+  <url>https://pkgs.dev.azure.com/newprojectazure14/project1/_packaging/repo14/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+	<distributionManagement>
 
 </project>
